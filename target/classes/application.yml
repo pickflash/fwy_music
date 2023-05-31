@@ -1,0 +1,22 @@
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/db_music_wenli?serverTimezone=UTC
+      username: root
+      password: 123456
+  main:
+    allow-circular-references: true
+
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: AUTO
+file:
+  staticAccessPath: /upload/**
+  # 设置 文件上传的盘符路径
+  uploadFolder: E:/文件/java/Test/upload/
